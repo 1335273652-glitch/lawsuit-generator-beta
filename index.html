@@ -20,6 +20,3243 @@
 <div class="shell"><header class="topbar"><div class="brand"><div class="brand-mark">法</div><strong>法律文书模板生成工具</strong></div><div class="topnote">诉状0.7β · 精简问卷版</div></header>
 <div class="layout"><aside><div class="eyebrow">CASE BUILDER</div><div class="side-title">人身损害类<br/>诉状生成器</div><div class="side-copy">题目与选项严格来自律师提供的《问卷设计与计算规则》题库，系统按选项跳转并生成对应诉状草稿。</div><ul class="steps"><li id="step1" class="active"><span class="dot">1</span><span>案件分流</span></li><li id="step2"><span class="dot">2</span><span>案情问卷</span></li><li id="step3"><span class="dot">3</span><span>生成预览</span></li></ul><div class="saved" id="saveState">● 草稿已保存在本机</div></aside>
 <main><div class="panel" id="app"></div></main></div></div>
+<script type="application/json" id="embedded-questions">{
+  "version": "0.7",
+  "source": "人身损害诉状生成器_问卷设计与计算规则_v1.0.docx",
+  "declaredQuestionCount": 115,
+  "parsedQuestionCount": 115,
+  "modules": [
+    {
+      "id": "A",
+      "name": "案件分流"
+    },
+    {
+      "id": "B",
+      "name": "当事人"
+    },
+    {
+      "id": "C",
+      "name": "事发经过"
+    },
+    {
+      "id": "D",
+      "name": "损害后果与鉴定"
+    },
+    {
+      "id": "E",
+      "name": "损失明细"
+    },
+    {
+      "id": "F",
+      "name": "责任主体与保险"
+    },
+    {
+      "id": "G",
+      "name": "工伤专章"
+    },
+    {
+      "id": "H",
+      "name": "交通事故专章"
+    },
+    {
+      "id": "I",
+      "name": "一般侵权专章"
+    },
+    {
+      "id": "J",
+      "name": "程序与管辖"
+    },
+    {
+      "id": "K",
+      "name": "诉请与证据"
+    }
+  ],
+  "questions": [
+    {
+      "id": "A1",
+      "module": "A",
+      "title": "本次人身伤害是在什么场景下发生的？（单选，决定案件类型）",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "工作过程中因工作原因受伤，或上下班途中发生交通事故",
+          "next": "A2"
+        },
+        {
+          "value": "b",
+          "label": "道路上的机动车/非机动车交通事故",
+          "next": "A3"
+        },
+        {
+          "value": "c",
+          "label": "商场、酒店、景区、车站等经营或公共场所内受伤",
+          "next": "C1"
+        },
+        {
+          "value": "d",
+          "label": "被他人殴打、故意伤害、寻衅滋事",
+          "next": "C1"
+        },
+        {
+          "value": "e",
+          "label": "诊疗、手术、用药等医疗行为造成损害",
+          "next": "C1"
+        },
+        {
+          "value": "f",
+          "label": "因产品、食品、药品、化妆品缺陷受伤",
+          "next": "C1"
+        },
+        {
+          "value": "g",
+          "label": "被饲养的动物、流浪动物伤害",
+          "next": "C1"
+        },
+        {
+          "value": "h",
+          "label": "被高空抛掷物、坠落物砸伤",
+          "next": "C1"
+        },
+        {
+          "value": "i",
+          "label": "在提供劳务、帮工、承揽、装修、装卸等作业中受伤",
+          "next": "C1"
+        },
+        {
+          "value": "j",
+          "label": "未成年子女在学校、幼儿园、培训机构受伤",
+          "next": "C1"
+        },
+        {
+          "value": "k",
+          "label": "其他情形（如网络侵权、环境污染、物件致害）",
+          "next": "C1"
+        }
+      ],
+      "next": "A2",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "A2",
+      "module": "A",
+      "title": "该次伤害属于下列哪种工伤情形？",
+      "type": "single",
+      "required": true,
+      "showWhen": "A1=work",
+      "options": [
+        {
+          "value": "a",
+          "label": "工作时间、工作场所内，因工作原因受到事故伤害",
+          "next": "A3"
+        },
+        {
+          "value": "b",
+          "label": "工作时间前后在工作场所内，从事预备性或收尾性工作受伤",
+          "next": "A3"
+        },
+        {
+          "value": "c",
+          "label": "工作时间、工作场所内，因履行工作职责受到暴力等意外伤害",
+          "next": "A3"
+        },
+        {
+          "value": "d",
+          "label": "患职业病",
+          "next": "A3"
+        },
+        {
+          "value": "e",
+          "label": "因工外出期间，因工作原因受伤或发生事故下落不明",
+          "next": "A3"
+        },
+        {
+          "value": "f",
+          "label": "上下班途中，受到非本人主要责任的交通事故等伤害",
+          "next": "A3"
+        },
+        {
+          "value": "g",
+          "label": "工作时间和工作岗位，突发疾病死亡或48小时内抢救无效死亡",
+          "next": "A3"
+        },
+        {
+          "value": "h",
+          "label": "抢险救灾等维护国家利益、公共利益活动中受伤",
+          "next": "A3"
+        },
+        {
+          "value": "i",
+          "label": "退役军人旧伤复发（已取得革命伤残军人证）",
+          "next": "A3"
+        }
+      ],
+      "next": "A3",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "A3",
+      "module": "A",
+      "title": "本次事故是否同时可能构成工伤？（决定是否并行主张工伤保险待遇）",
+      "type": "single",
+      "required": true,
+      "showWhen": "A1=work|A1=traffic",
+      "options": [
+        {
+          "value": "a",
+          "label": "是，属于单位职工且因工作/上下班途中受伤，已认定或正在认定",
+          "next": "C1"
+        },
+        {
+          "value": "b",
+          "label": "否，本人不是该单位职工，或不属于上下班途中",
+          "next": "C1"
+        },
+        {
+          "value": "c",
+          "label": "不确定，需要判断劳动关系与'上下班途中'要件",
+          "next": "C1"
+        }
+      ],
+      "next": "C1",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "A4",
+      "module": "A",
+      "title": "目前案件进展到哪一步？（决定生成哪一种文书）",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "仍在治疗中，尚未终结",
+          "next": "B1"
+        },
+        {
+          "value": "b",
+          "label": "治疗已终结，尚未做伤残鉴定",
+          "next": "B1"
+        },
+        {
+          "value": "c",
+          "label": "已做伤残鉴定/劳动能力鉴定",
+          "next": "B1"
+        },
+        {
+          "value": "d",
+          "label": "已与对方或单位协商，未达成一致",
+          "next": "B1"
+        },
+        {
+          "value": "e",
+          "label": "准备起诉，尚未立案",
+          "next": "B1"
+        },
+        {
+          "value": "f",
+          "label": "已进入诉讼或仲裁程序",
+          "next": "B1"
+        }
+      ],
+      "next": "B1",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "B1",
+      "module": "B",
+      "title": "受害人目前的生存状态？",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "健在，本人作为原告",
+          "next": "B3"
+        },
+        {
+          "value": "b",
+          "label": "已因本次伤害死亡，由近亲属起诉",
+          "next": "B2"
+        }
+      ],
+      "next": "B3",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "B2",
+      "module": "B",
+      "title": "主张权利的近亲属共几人？（配偶、子女、父母等第一顺序继承人）",
+      "type": "number",
+      "required": true,
+      "showWhen": "B1=dead",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "B3",
+      "module": "B",
+      "title": "原告姓名（多人用顿号分隔，按起诉状顺序）",
+      "type": "text",
+      "required": true,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "B4",
+      "module": "B",
+      "title": "原告性别",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "男",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "女",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "B5",
+      "module": "B",
+      "title": "原告出生日期（用于计算赔偿年限）",
+      "type": "date_parts",
+      "required": true,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "B6",
+      "module": "B",
+      "title": "原告身份证号",
+      "type": "text",
+      "required": true,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "用于生成起诉状原告身份信息，请填写真实、完整的身份证号码。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "B7",
+      "module": "B",
+      "title": "原告住所地（省/市/区县 + 详细地址）",
+      "type": "text",
+      "required": true,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "B8",
+      "module": "B",
+      "title": "原告联系电话",
+      "type": "text",
+      "required": true,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "用于法院联系及生成起诉状，请填写当前可正常接听的电话号码。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "B9",
+      "module": "B",
+      "title": "原告户籍性质（仅用于判断可否主张住所地标准）",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "城镇户籍",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "农村户籍",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "其他（境外、集体户等）",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "B10",
+      "module": "B",
+      "title": "原告主要收入来源形式",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "单位职工，有固定工资",
+          "next": "C1"
+        },
+        {
+          "value": "b",
+          "label": "个体经营/自由职业，收入不固定",
+          "next": "C1"
+        },
+        {
+          "value": "c",
+          "label": "务农",
+          "next": "C1"
+        },
+        {
+          "value": "d",
+          "label": "已退休，被返聘或仍有劳务收入",
+          "next": "C1"
+        },
+        {
+          "value": "e",
+          "label": "在校学生",
+          "next": "C1"
+        },
+        {
+          "value": "f",
+          "label": "无业/家务劳动",
+          "next": "C1"
+        }
+      ],
+      "next": "C1",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "C1",
+      "module": "C",
+      "title": "事故发生（受伤）的具体日期",
+      "type": "date_parts",
+      "required": true,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "C2",
+      "module": "C",
+      "title": "事故发生地（省/市/区县 + 具体路段或场所名称）",
+      "type": "text",
+      "required": true,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "C3",
+      "module": "C",
+      "title": "请按'谁—在做什么—怎么受伤—现场情况'描述经过（3—5句即可）",
+      "type": "textarea",
+      "required": true,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "C4",
+      "module": "C",
+      "title": "当时是否报警或呼叫急救？",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "已报警并留有出警记录",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "未报警",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "仅呼叫120，未报警",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "C5",
+      "module": "C",
+      "title": "是否取得《道路交通事故认定书》？",
+      "type": "single",
+      "required": true,
+      "showWhen": "A1=traffic|A2=14_6",
+      "options": [
+        {
+          "value": "a",
+          "label": "已取得",
+          "next": "C6"
+        },
+        {
+          "value": "b",
+          "label": "交警未出具（仅作简易处理/未报警）",
+          "next": "C8"
+        },
+        {
+          "value": "c",
+          "label": "仍在处理中，尚未出具",
+          "next": "C8"
+        }
+      ],
+      "next": "C6",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "C6",
+      "module": "C",
+      "title": "认定书对本次事故的责任划分是？",
+      "type": "single",
+      "required": true,
+      "showWhen": "C5=yes",
+      "options": [
+        {
+          "value": "a",
+          "label": "对方全部责任",
+          "next": "C7"
+        },
+        {
+          "value": "b",
+          "label": "对方主要责任",
+          "next": "C7"
+        },
+        {
+          "value": "c",
+          "label": "同等责任",
+          "next": "C7"
+        },
+        {
+          "value": "d",
+          "label": "对方次要责任",
+          "next": "C7"
+        },
+        {
+          "value": "e",
+          "label": "对方无责任",
+          "next": "C7"
+        },
+        {
+          "value": "f",
+          "label": "未认定/无法认定",
+          "next": "C7"
+        }
+      ],
+      "next": "C7",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "C7",
+      "module": "C",
+      "title": "对方应承担的赔偿责任比例（%，据认定书或预估）",
+      "type": "number",
+      "required": false,
+      "showWhen": "C5=yes",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "C8",
+      "module": "C",
+      "title": "现场是否有监控、行车记录仪或目击证人？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "已调取到监控/记录仪",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "存在但尚未调取",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "有目击证人",
+          "next": null
+        },
+        {
+          "value": "d",
+          "label": "无",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "C9",
+      "module": "C",
+      "title": "对方行为的主观状态？",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "故意（殴打、推搡、抛物等）",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "过失（疏忽、违规操作）",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "不清楚",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "C10",
+      "module": "C",
+      "title": "是否涉及刑事程序（对方被立案侦查/起诉）？",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "不涉及刑事案件",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "已刑事立案，考虑附带民事诉讼",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "已刑事立案，拟另行单独民事起诉",
+          "next": null
+        },
+        {
+          "value": "d",
+          "label": "刑事已判决，另行民事",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D1",
+      "module": "D",
+      "title": "本次伤害造成的后果（可多选）",
+      "type": "multi",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "一般伤害（治疗后可恢复，未构成伤残）",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "构成伤残",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "死亡",
+          "next": null
+        },
+        {
+          "value": "d",
+          "label": "造成严重精神障碍",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D2",
+      "module": "D",
+      "title": "住院天数（未住院填0）",
+      "type": "number",
+      "required": true,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D3",
+      "module": "D",
+      "title": "是否已构成伤残？",
+      "type": "single",
+      "required": true,
+      "showWhen": "B1=alive",
+      "options": [
+        {
+          "value": "a",
+          "label": "已鉴定构成伤残",
+          "next": "D4"
+        },
+        {
+          "value": "b",
+          "label": "经鉴定不构成伤残",
+          "next": "D7"
+        },
+        {
+          "value": "c",
+          "label": "尚未鉴定",
+          "next": "D7"
+        }
+      ],
+      "next": "D4",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D4",
+      "module": "D",
+      "title": "伤残等级（以鉴定意见书为准）",
+      "type": "single",
+      "required": true,
+      "showWhen": "D3=yes",
+      "options": [
+        {
+          "value": "a",
+          "label": "1级伤残",
+          "next": "D5"
+        },
+        {
+          "value": "b",
+          "label": "2级伤残",
+          "next": "D5"
+        },
+        {
+          "value": "c",
+          "label": "3级伤残",
+          "next": "D5"
+        },
+        {
+          "value": "d",
+          "label": "4级伤残",
+          "next": "D5"
+        },
+        {
+          "value": "e",
+          "label": "5级伤残",
+          "next": "D5"
+        },
+        {
+          "value": "f",
+          "label": "6级伤残",
+          "next": "D5"
+        },
+        {
+          "value": "g",
+          "label": "7级伤残",
+          "next": "D5"
+        },
+        {
+          "value": "h",
+          "label": "8级伤残",
+          "next": "D5"
+        },
+        {
+          "value": "i",
+          "label": "9级伤残",
+          "next": "D5"
+        },
+        {
+          "value": "j",
+          "label": "10级伤残",
+          "next": "D5"
+        }
+      ],
+      "next": "D5",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D5",
+      "module": "D",
+      "title": "是否存在多处伤残（多等级）？",
+      "type": "single",
+      "required": false,
+      "showWhen": "D3=yes",
+      "options": [
+        {
+          "value": "a",
+          "label": "是，有多处伤残",
+          "next": "D6"
+        },
+        {
+          "value": "b",
+          "label": "否，仅一处",
+          "next": "D6"
+        }
+      ],
+      "next": "D6",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D6",
+      "module": "D",
+      "title": "定残日（鉴定意见书出具日期）",
+      "type": "date_parts",
+      "required": true,
+      "showWhen": "D3=yes",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D7",
+      "module": "D",
+      "title": "是否需要后续治疗（二次手术、康复、取内固定等）？",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "需要，已有医嘱或鉴定意见",
+          "next": "D8"
+        },
+        {
+          "value": "b",
+          "label": "可能需要，尚无明确意见",
+          "next": "D8"
+        },
+        {
+          "value": "c",
+          "label": "不需要",
+          "next": "D8"
+        }
+      ],
+      "next": "D8",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D7a",
+      "module": "D",
+      "title": "后续治疗费预估金额（元，按医嘱或鉴定意见确定的数额填写）",
+      "type": "money",
+      "required": false,
+      "showWhen": "D7=yes",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "D7a",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D8",
+      "module": "D",
+      "title": "护理依赖程度（定残后长期护理的，按此确定护理级别）",
+      "type": "single",
+      "required": false,
+      "showWhen": "B1=alive",
+      "options": [
+        {
+          "value": "a",
+          "label": "无需护理依赖",
+          "next": "D9"
+        },
+        {
+          "value": "b",
+          "label": "部分护理依赖",
+          "next": "D9"
+        },
+        {
+          "value": "c",
+          "label": "大部分护理依赖",
+          "next": "D9"
+        },
+        {
+          "value": "d",
+          "label": "完全护理依赖",
+          "next": "D9"
+        }
+      ],
+      "next": "D9",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D9",
+      "module": "D",
+      "title": "误工期（天，依鉴定意见或医嘱；未鉴定可填住院天数+医嘱休息天数）",
+      "type": "number",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D10",
+      "module": "D",
+      "title": "护理期（天）",
+      "type": "number",
+      "required": false,
+      "showWhen": "B1=alive",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D11",
+      "module": "D",
+      "title": "营养期（天）",
+      "type": "number",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D12",
+      "module": "D",
+      "title": "是否需要配置残疾辅助器具（假肢、轮椅、助听器等）？",
+      "type": "single",
+      "required": false,
+      "showWhen": "D3=yes",
+      "options": [
+        {
+          "value": "a",
+          "label": "需要",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "不需要",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D12a",
+      "module": "D",
+      "title": "辅助器具单价（元，按普通适用器具的合理费用标准）",
+      "type": "money",
+      "required": false,
+      "showWhen": "D12=yes",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "D12a",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D12b",
+      "module": "D",
+      "title": "更换周期（年，参照配制机构意见，如假肢4年、轮椅5年）",
+      "type": "number",
+      "required": false,
+      "showWhen": "D12=yes",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "D12c",
+      "module": "D",
+      "title": "赔偿年限（年，未填按残疾赔偿金年限，即 20 年递减至 5 年）",
+      "type": "number",
+      "required": false,
+      "showWhen": "D12=yes",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E1",
+      "module": "E",
+      "title": "医疗费总额（元，含门诊+住院+外购药，凭票据）",
+      "type": "money",
+      "required": true,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "E1",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E2",
+      "module": "E",
+      "title": "其中医保/大病保险已报销金额（元，无则填0）",
+      "type": "money",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "E2",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E3",
+      "module": "E",
+      "title": "住院伙食补助费标准（元/天，参照当地国家机关一般工作人员出差伙食补助标准，通常50—100）",
+      "type": "money",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "E3",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E4",
+      "module": "E",
+      "title": "营养费标准（元/天，通常30—50，需医嘱或鉴定支持）",
+      "type": "money",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "E4",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E5",
+      "module": "E",
+      "title": "护理人数（原则上1人；医疗机构或鉴定机构有明确意见的可增加）",
+      "type": "number",
+      "required": false,
+      "showWhen": "B1=alive",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E6",
+      "module": "E",
+      "title": "护理费标准（元/天；护理人员有收入的参照误工费，无收入或雇请护工按当地护工同等级劳务报酬）",
+      "type": "money",
+      "required": false,
+      "showWhen": "B1=alive",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "E6",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E7",
+      "module": "E",
+      "title": "受害人月收入（元，受伤前12个月平均应发工资或经营净收入）",
+      "type": "money",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "E7",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E8",
+      "module": "E",
+      "title": "收入证明的完备程度？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "劳动合同+工资流水+完税证明齐全",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "部分具备（如仅有流水或仅有单位证明）",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "无书面证据",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E9",
+      "module": "E",
+      "title": "交通费（元，凭票据；含受害人及必要陪护人员就医、转院）",
+      "type": "money",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "E9",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E10",
+      "module": "E",
+      "title": "住宿费（元，外地治疗且无法住院时受害人及陪护人员的合理住宿支出）",
+      "type": "money",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "E10",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E11",
+      "module": "E",
+      "title": "被扶养人人数（无则填0）",
+      "type": "number",
+      "required": false,
+      "showWhen": "B1=alive",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E12",
+      "module": "E",
+      "title": "被扶养人情况（逐人填写：姓名/与受害人关系/出生日期/是否无劳动能力且无生活来源/共同扶养人数）",
+      "type": "textarea",
+      "required": false,
+      "showWhen": "E11>0",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E13",
+      "module": "E",
+      "title": "精神损害抚慰金期望金额（元，可填0由系统按伤残等级给出建议区间）",
+      "type": "money",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "E13",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E14",
+      "module": "E",
+      "title": "财产损失（元：车辆维修、衣物、手机、眼镜、首饰等，凭定损单/发票）",
+      "type": "money",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "E14",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E15",
+      "module": "E",
+      "title": "鉴定费、公证费、保全费、公告费等合理支出（元）",
+      "type": "money",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "E15",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "E16",
+      "module": "E",
+      "title": "已实际收到的赔偿/垫付款项（元，含保险垫付、单位支付、对方给付）",
+      "type": "money",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "E16",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "F1",
+      "module": "F",
+      "title": "直接侵权人是否为单位工作人员且在执行工作任务？",
+      "type": "single",
+      "required": false,
+      "showWhen": "A1=traffic|A1=work|A1=labor",
+      "options": [
+        {
+          "value": "a",
+          "label": "是，系履职行为",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "否，属个人行为",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "不确定",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "F2",
+      "module": "F",
+      "title": "是否属于劳务派遣？",
+      "type": "single",
+      "required": false,
+      "showWhen": "F1=yes",
+      "options": [
+        {
+          "value": "a",
+          "label": "是",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "否",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "F3",
+      "module": "F",
+      "title": "受害人一方与对方是个人劳务、帮工还是承揽关系？",
+      "type": "single",
+      "required": false,
+      "showWhen": "A1=labor|A1=work",
+      "options": [
+        {
+          "value": "a",
+          "label": "个人劳务（有偿雇请）",
+          "next": "F4"
+        },
+        {
+          "value": "b",
+          "label": "无偿帮工",
+          "next": "F4"
+        },
+        {
+          "value": "c",
+          "label": "承揽/分包/装修",
+          "next": "F4"
+        },
+        {
+          "value": "d",
+          "label": "均不属于",
+          "next": "F5"
+        }
+      ],
+      "next": "F4",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "F4",
+      "module": "F",
+      "title": "定作人（发包方）在定作、指示、选任上是否有过错？",
+      "type": "single",
+      "required": false,
+      "showWhen": "F3=contract",
+      "options": [
+        {
+          "value": "a",
+          "label": "有",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "无",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "不确定",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "F5",
+      "module": "F",
+      "title": "肇事车辆是否投保交强险？",
+      "type": "single",
+      "required": false,
+      "showWhen": "A1=traffic",
+      "options": [
+        {
+          "value": "a",
+          "label": "已投保",
+          "next": "F6"
+        },
+        {
+          "value": "b",
+          "label": "未投保/脱保",
+          "next": "F7"
+        },
+        {
+          "value": "c",
+          "label": "不清楚",
+          "next": "F7"
+        }
+      ],
+      "next": "F6",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "F6",
+      "module": "F",
+      "title": "商业第三者责任险限额（万元，无则填0）",
+      "type": "money",
+      "required": false,
+      "showWhen": "A1=traffic",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "F6",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "F7",
+      "module": "F",
+      "title": "肇事车辆的权属与使用关系？",
+      "type": "single",
+      "required": false,
+      "showWhen": "A1=traffic",
+      "options": [
+        {
+          "value": "a",
+          "label": "侵权人自有车辆",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "借用他人车辆",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "租赁车辆",
+          "next": null
+        },
+        {
+          "value": "d",
+          "label": "挂靠经营（如出租车、货运）",
+          "next": null
+        },
+        {
+          "value": "e",
+          "label": "单位车辆，职务行为",
+          "next": null
+        },
+        {
+          "value": "f",
+          "label": "盗抢车辆",
+          "next": null
+        },
+        {
+          "value": "g",
+          "label": "已转让未过户",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "F8",
+      "module": "F",
+      "title": "受害人自身是否存在过错？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "无过错",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "有轻微过错（如未走人行道）",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "有较大过错（如闯红灯、酒后）",
+          "next": null
+        },
+        {
+          "value": "d",
+          "label": "尚不明确",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "F9",
+      "module": "F",
+      "title": "是否存在两个以上侵权人？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "有，需列共同被告",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "仅一个侵权人",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "F10",
+      "module": "F",
+      "title": "受害人是否属于无偿搭乘（好意同乘）？",
+      "type": "single",
+      "required": false,
+      "showWhen": "A1=traffic",
+      "options": [
+        {
+          "value": "a",
+          "label": "是",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "否",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "F11",
+      "module": "F",
+      "title": "场所经营者、管理者或群众性活动组织者是否尽到安全保障义务？",
+      "type": "single",
+      "required": false,
+      "showWhen": "A1=premises|A1=school|A1=other",
+      "options": [
+        {
+          "value": "a",
+          "label": "未尽义务（可主张其承担责任）",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "已尽义务",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "不确定",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "F12",
+      "module": "F",
+      "title": "被告信息（可添加多名被告）",
+      "type": "defendants",
+      "required": true,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "请逐一填写拟列被告的名称、案件身份和地址；驾驶人、车主、用人单位、侵权人及保险公司应分别添加。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G1",
+      "module": "G",
+      "title": "用人单位是否依法参加工伤保险？",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "已参保",
+          "next": "G2"
+        },
+        {
+          "value": "b",
+          "label": "未参保",
+          "next": "G2"
+        },
+        {
+          "value": "c",
+          "label": "不清楚（可通过社保缴费记录查询）",
+          "next": "G2"
+        }
+      ],
+      "next": "G2",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G2",
+      "module": "G",
+      "title": "是否签订书面劳动合同？",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "已签订",
+          "next": "G3"
+        },
+        {
+          "value": "b",
+          "label": "未签订，但存在事实劳动关系",
+          "next": "G3"
+        },
+        {
+          "value": "c",
+          "label": "劳务派遣/外包",
+          "next": "G3"
+        },
+        {
+          "value": "d",
+          "label": "平台用工（外卖、网约车、即时配送等）",
+          "next": "G3"
+        }
+      ],
+      "next": "G3",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G3",
+      "module": "G",
+      "title": "本人工资（元/月，受伤前12个月平均月缴费工资）",
+      "type": "money",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "G3",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G4",
+      "module": "G",
+      "title": "统筹地区上年度职工月平均工资（元/月，用于丧葬补助金、生活护理费）",
+      "type": "money",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "G4",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G5",
+      "module": "G",
+      "title": "停工留薪期（月，一般不超过12个月，伤情严重经劳动能力鉴定委员会确认可延长不超过12个月）",
+      "type": "number",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G6",
+      "module": "G",
+      "title": "停工留薪期工资是否已足额支付？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "已足额支付",
+          "next": "G7"
+        },
+        {
+          "value": "b",
+          "label": "部分支付",
+          "next": "G7"
+        },
+        {
+          "value": "c",
+          "label": "未支付",
+          "next": "G7"
+        }
+      ],
+      "next": "G7",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G7",
+      "module": "G",
+      "title": "已实际享受的工伤保险待遇（可多选）",
+      "type": "multi",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "医疗费（基金已结算）",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "一次性伤残补助金",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "伤残津贴（1—6级按月）",
+          "next": null
+        },
+        {
+          "value": "d",
+          "label": "生活护理费",
+          "next": null
+        },
+        {
+          "value": "e",
+          "label": "辅助器具费",
+          "next": null
+        },
+        {
+          "value": "f",
+          "label": "均未享受",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G8",
+      "module": "G",
+      "title": "是否已经/准备申请劳动仲裁？",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "已申请仲裁",
+          "next": "G9"
+        },
+        {
+          "value": "b",
+          "label": "准备申请",
+          "next": "G10"
+        },
+        {
+          "value": "c",
+          "label": "尚未考虑",
+          "next": "G10"
+        }
+      ],
+      "next": "G9",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G9",
+      "module": "G",
+      "title": "仲裁请求与裁决结果（简要列明请求项目与裁决金额；未出结果可写'审理中'）",
+      "type": "textarea",
+      "required": false,
+      "showWhen": "G8=yes",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G9a",
+      "module": "G",
+      "title": "仲裁裁决的结果属于哪种情形？",
+      "type": "single",
+      "required": false,
+      "showWhen": "G8=yes",
+      "options": [
+        {
+          "value": "a",
+          "label": "全部支持",
+          "next": "G10"
+        },
+        {
+          "value": "b",
+          "label": "部分支持，对未支持部分不服",
+          "next": "G10"
+        },
+        {
+          "value": "c",
+          "label": "驳回全部仲裁请求",
+          "next": "G10"
+        },
+        {
+          "value": "d",
+          "label": "不予受理或按撤回申请处理",
+          "next": "G10"
+        },
+        {
+          "value": "e",
+          "label": "尚未作出裁决（审理中）",
+          "next": "G10"
+        }
+      ],
+      "next": "G10",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G10",
+      "module": "G",
+      "title": "是否已完成工伤认定？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "已认定工伤",
+          "next": "G11"
+        },
+        {
+          "value": "b",
+          "label": "正在申请",
+          "next": "G11"
+        },
+        {
+          "value": "c",
+          "label": "尚未申请（需评估是否超过1年）",
+          "next": "G11"
+        },
+        {
+          "value": "d",
+          "label": "申请被不予认定，已复议/诉讼",
+          "next": "G11"
+        }
+      ],
+      "next": "G11",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G10b",
+      "module": "G",
+      "title": "劳动能力鉴定结论是否已送达？",
+      "type": "single",
+      "required": false,
+      "showWhen": "G10=yes",
+      "options": [
+        {
+          "value": "a",
+          "label": "已收到，未满15日（仍可申请再次鉴定）",
+          "next": "G11"
+        },
+        {
+          "value": "b",
+          "label": "已收到，已超过15日",
+          "next": "G11"
+        },
+        {
+          "value": "c",
+          "label": "尚未收到结论",
+          "next": "G11"
+        },
+        {
+          "value": "d",
+          "label": "已申请再次鉴定",
+          "next": "G11"
+        }
+      ],
+      "next": "G11",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G11",
+      "module": "G",
+      "title": "是否主张一次性工伤医疗补助金和一次性伤残就业补助金（五至十级）？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "主张（需按省级标准计算）",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "暂不主张",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "不适用（一至四级）",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "G12",
+      "module": "G",
+      "title": "本次工伤是否由第三人侵权造成（如交通事故、第三人殴打）？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "是，存在第三人侵权",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "否，仅工伤",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "H1",
+      "module": "H",
+      "title": "受害人在事故中的身份？",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "行人",
+          "next": "H2"
+        },
+        {
+          "value": "b",
+          "label": "非机动车驾驶人（电动车、自行车）",
+          "next": "H2"
+        },
+        {
+          "value": "c",
+          "label": "机动车驾驶人",
+          "next": "H2"
+        },
+        {
+          "value": "d",
+          "label": "乘车人",
+          "next": "H2"
+        }
+      ],
+      "next": "H2",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "H2",
+      "module": "H",
+      "title": "对方车辆类型？",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "机动车",
+          "next": "H3"
+        },
+        {
+          "value": "b",
+          "label": "非机动车",
+          "next": "H3"
+        },
+        {
+          "value": "c",
+          "label": "无对方车辆（单方事故/自撞）",
+          "next": "H3"
+        }
+      ],
+      "next": "H3",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "H3",
+      "module": "H",
+      "title": "受害人是否属于肇事车辆的本车人员？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "是",
+          "next": "H4"
+        },
+        {
+          "value": "b",
+          "label": "否",
+          "next": "H4"
+        }
+      ],
+      "next": "H4",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "H4",
+      "module": "H",
+      "title": "交强险承保公司及保单号（可留空）",
+      "type": "text",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "H5",
+      "module": "H",
+      "title": "保险公司已垫付/赔付金额（元，无则填0）",
+      "type": "money",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "H5",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "H6",
+      "module": "H",
+      "title": "是否存在肇事逃逸、未投保或无法查明侵权人的情形？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "肇事逃逸",
+          "next": "H7"
+        },
+        {
+          "value": "b",
+          "label": "未投保交强险",
+          "next": "H7"
+        },
+        {
+          "value": "c",
+          "label": "侵权人无法查明",
+          "next": "H7"
+        },
+        {
+          "value": "d",
+          "label": "均无",
+          "next": "H7"
+        }
+      ],
+      "next": "H7",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "H7",
+      "module": "H",
+      "title": "是否涉及道路管理者、施工单位、车辆生产者等第三方责任？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "道路管理者（坑槽、井盖缺失等）",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "施工单位（未设警示、围挡）",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "车辆本身存在缺陷",
+          "next": null
+        },
+        {
+          "value": "d",
+          "label": "无",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "I1",
+      "module": "I",
+      "title": "侵权行为的具体类型？",
+      "type": "single",
+      "required": true,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "经营场所/公共场所未尽安全保障义务（第1198条）",
+          "next": "I2"
+        },
+        {
+          "value": "b",
+          "label": "故意伤害/人身攻击（第1165、1168条）",
+          "next": "I9"
+        },
+        {
+          "value": "c",
+          "label": "动物致害（第1245—1251条）",
+          "next": "I4"
+        },
+        {
+          "value": "d",
+          "label": "高空抛物/坠物（第1254条）",
+          "next": "I5"
+        },
+        {
+          "value": "e",
+          "label": "产品责任（第1202—1207条）",
+          "next": "I6"
+        },
+        {
+          "value": "f",
+          "label": "教育机构责任（第1199—1201条）",
+          "next": "I7"
+        },
+        {
+          "value": "g",
+          "label": "提供劳务者受害/帮工（第1192、1193条）",
+          "next": "I8"
+        },
+        {
+          "value": "h",
+          "label": "医疗损害责任（第1218—1228条）",
+          "next": "I9"
+        },
+        {
+          "value": "i",
+          "label": "网络侵权（第1194—1197条）",
+          "next": "I9"
+        },
+        {
+          "value": "j",
+          "label": "其他",
+          "next": "I9"
+        }
+      ],
+      "next": "I2",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "I2",
+      "module": "I",
+      "title": "场所类型？",
+      "type": "single",
+      "required": false,
+      "showWhen": "I1=premises",
+      "options": [
+        {
+          "value": "a",
+          "label": "商场、超市、餐饮",
+          "next": "I3"
+        },
+        {
+          "value": "b",
+          "label": "酒店、宾馆、洗浴",
+          "next": "I3"
+        },
+        {
+          "value": "c",
+          "label": "车站、机场、地铁",
+          "next": "I3"
+        },
+        {
+          "value": "d",
+          "label": "景区、游乐场、体育场馆",
+          "next": "I3"
+        },
+        {
+          "value": "e",
+          "label": "住宅小区公共区域",
+          "next": "I3"
+        },
+        {
+          "value": "f",
+          "label": "道路、地下通道、天桥",
+          "next": "I3"
+        },
+        {
+          "value": "g",
+          "label": "其他",
+          "next": "I3"
+        }
+      ],
+      "next": "I3",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "I3",
+      "module": "I",
+      "title": "管理者未尽安全保障义务的具体表现（可多选，对应举证方向）",
+      "type": "multi",
+      "required": false,
+      "showWhen": "I1=premises",
+      "options": [
+        {
+          "value": "a",
+          "label": "地面湿滑、积水结冰，无警示标志",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "设施设备存在缺陷（扶手、电梯、玻璃门）",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "缺少护栏、防滑、限高警示",
+          "next": null
+        },
+        {
+          "value": "d",
+          "label": "照明不足、监控缺失",
+          "next": null
+        },
+        {
+          "value": "e",
+          "label": "安保人员缺失、未制止第三人侵害",
+          "next": null
+        },
+        {
+          "value": "f",
+          "label": "事发后未及时救助、未送医",
+          "next": null
+        },
+        {
+          "value": "g",
+          "label": "其他",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "I4",
+      "module": "I",
+      "title": "动物的类型与管理情形？",
+      "type": "single",
+      "required": false,
+      "showWhen": "I1=animal",
+      "options": [
+        {
+          "value": "a",
+          "label": "禁止饲养的烈性犬等危险动物",
+          "next": "I9"
+        },
+        {
+          "value": "b",
+          "label": "普通饲养的宠物（犬、猫等）",
+          "next": "I9"
+        },
+        {
+          "value": "c",
+          "label": "流浪/遗弃/逃逸动物",
+          "next": "I9"
+        },
+        {
+          "value": "d",
+          "label": "动物园动物",
+          "next": "I9"
+        },
+        {
+          "value": "e",
+          "label": "牲畜、家禽",
+          "next": "I9"
+        }
+      ],
+      "next": "I9",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "I5",
+      "module": "I",
+      "title": "是否已查明具体抛物/坠物的侵权人？",
+      "type": "single",
+      "required": false,
+      "showWhen": "I1=falling",
+      "options": [
+        {
+          "value": "a",
+          "label": "已查明",
+          "next": "I9"
+        },
+        {
+          "value": "b",
+          "label": "经公安调查仍难以确定",
+          "next": "I9"
+        },
+        {
+          "value": "c",
+          "label": "系建筑物本身脱落、坠落（非人为抛掷）",
+          "next": "I9"
+        }
+      ],
+      "next": "I9",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "I6",
+      "module": "I",
+      "title": "产品缺陷的类型？",
+      "type": "single",
+      "required": false,
+      "showWhen": "I1=product",
+      "options": [
+        {
+          "value": "a",
+          "label": "设计缺陷",
+          "next": "I9"
+        },
+        {
+          "value": "b",
+          "label": "制造缺陷",
+          "next": "I9"
+        },
+        {
+          "value": "c",
+          "label": "警示说明缺陷",
+          "next": "I9"
+        },
+        {
+          "value": "d",
+          "label": "缺陷类型不明",
+          "next": "I9"
+        }
+      ],
+      "next": "I9",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "I7",
+      "module": "I",
+      "title": "受害未成年人的年龄区间？",
+      "type": "single",
+      "required": false,
+      "showWhen": "I1=school",
+      "options": [
+        {
+          "value": "a",
+          "label": "不满8周岁",
+          "next": "I7b"
+        },
+        {
+          "value": "b",
+          "label": "8周岁以上未满18周岁",
+          "next": "I7b"
+        }
+      ],
+      "next": "I7b",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "I7b",
+      "module": "I",
+      "title": "伤害来源？",
+      "type": "single",
+      "required": false,
+      "showWhen": "I1=school",
+      "options": [
+        {
+          "value": "a",
+          "label": "校内教师、职工致害",
+          "next": "I9"
+        },
+        {
+          "value": "b",
+          "label": "校外第三人进入校园致害",
+          "next": "I9"
+        },
+        {
+          "value": "c",
+          "label": "校舍、设施、器材缺陷",
+          "next": "I9"
+        },
+        {
+          "value": "d",
+          "label": "其他学生致害",
+          "next": "I9"
+        },
+        {
+          "value": "e",
+          "label": "学生自身原因（需审查学校管理过错）",
+          "next": "I9"
+        }
+      ],
+      "next": "I9",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "I8",
+      "module": "I",
+      "title": "受害人提供劳务是否有偿？",
+      "type": "single",
+      "required": false,
+      "showWhen": "I1=labor",
+      "options": [
+        {
+          "value": "a",
+          "label": "有偿（雇佣/劳务合同）",
+          "next": "I9"
+        },
+        {
+          "value": "b",
+          "label": "无偿帮工",
+          "next": "I9"
+        }
+      ],
+      "next": "I9",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "I9",
+      "module": "I",
+      "title": "是否已就因果关系、过错或伤残进行鉴定？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "已鉴定",
+          "next": "J1"
+        },
+        {
+          "value": "b",
+          "label": "准备申请鉴定",
+          "next": "J1"
+        },
+        {
+          "value": "c",
+          "label": "暂不鉴定",
+          "next": "J1"
+        }
+      ],
+      "next": "J1",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "J1",
+      "module": "J",
+      "title": "原告知道或应当知道权利受损及义务人之日",
+      "type": "date_parts",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "J2",
+      "module": "J",
+      "title": "是否存在诉讼时效中断事由？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "曾书面/微信催告索赔",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "对方曾承诺赔偿或部分支付",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "曾多次协商（有记录）",
+          "next": null
+        },
+        {
+          "value": "d",
+          "label": "无中断事由",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "J3",
+      "module": "J",
+      "title": "被告住所地（省/市/区县 + 详细地址）",
+      "type": "text",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "J4",
+      "module": "J",
+      "title": "拟起诉的法院（可留空，由系统按管辖规则推荐）",
+      "type": "text",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "J5",
+      "module": "J",
+      "title": "双方是否签订过仲裁协议或管辖协议？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "无",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "有（需审查效力）",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "J6",
+      "module": "J",
+      "title": "是否需要申请财产保全？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "需要",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "视对方履行能力再定",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "不需要",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "J7",
+      "module": "J",
+      "title": "是否符合诉讼费缓交、减交、免交条件？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "符合，拟申请",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "不符合",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "J8",
+      "module": "J",
+      "title": "本案案号（如（2026）甘1202民初1234号；未立案可留空）",
+      "type": "text",
+      "required": false,
+      "showWhen": "A4=litigating",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "J9",
+      "module": "J",
+      "title": "拟变更的是哪一类请求？",
+      "type": "single",
+      "required": false,
+      "showWhen": "A4=litigating",
+      "options": [
+        {
+          "value": "a",
+          "label": "增加请求（如新增残疾赔偿金）",
+          "next": "K1"
+        },
+        {
+          "value": "b",
+          "label": "变更金额（如伤残等级变化后重算）",
+          "next": "K1"
+        },
+        {
+          "value": "c",
+          "label": "减少请求（如已获部分赔偿）",
+          "next": "K1"
+        }
+      ],
+      "next": "K1",
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "J10",
+      "module": "J",
+      "title": "原起诉状载明的诉讼请求总额（元，用于计算增减差额）",
+      "type": "money",
+      "required": false,
+      "showWhen": "A4=litigating",
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": "J10",
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "K1",
+      "module": "K",
+      "title": "拟主张的诉讼请求项目（系统已按前述答案预勾选，可增删）",
+      "type": "multi",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "医疗费",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "后续治疗费",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "误工费",
+          "next": null
+        },
+        {
+          "value": "d",
+          "label": "护理费",
+          "next": null
+        },
+        {
+          "value": "e",
+          "label": "交通费",
+          "next": null
+        },
+        {
+          "value": "f",
+          "label": "住宿费",
+          "next": null
+        },
+        {
+          "value": "g",
+          "label": "住院伙食补助费",
+          "next": null
+        },
+        {
+          "value": "h",
+          "label": "营养费",
+          "next": null
+        },
+        {
+          "value": "i",
+          "label": "残疾赔偿金",
+          "next": null
+        },
+        {
+          "value": "j",
+          "label": "残疾辅助器具费",
+          "next": null
+        },
+        {
+          "value": "k",
+          "label": "死亡赔偿金",
+          "next": null
+        },
+        {
+          "value": "l",
+          "label": "丧葬费",
+          "next": null
+        },
+        {
+          "value": "m",
+          "label": "被扶养人生活费",
+          "next": null
+        },
+        {
+          "value": "n",
+          "label": "精神损害抚慰金",
+          "next": null
+        },
+        {
+          "value": "o",
+          "label": "财产损失",
+          "next": null
+        },
+        {
+          "value": "p",
+          "label": "鉴定费",
+          "next": null
+        },
+        {
+          "value": "q",
+          "label": "惩罚性赔偿",
+          "next": null
+        },
+        {
+          "value": "r",
+          "label": "一次性伤残补助金",
+          "next": null
+        },
+        {
+          "value": "s",
+          "label": "伤残津贴",
+          "next": null
+        },
+        {
+          "value": "t",
+          "label": "生活护理费",
+          "next": null
+        },
+        {
+          "value": "u",
+          "label": "停工留薪期工资",
+          "next": null
+        },
+        {
+          "value": "v",
+          "label": "一次性工伤医疗补助金及伤残就业补助金",
+          "next": null
+        },
+        {
+          "value": "w",
+          "label": "一次性工亡补助金",
+          "next": null
+        },
+        {
+          "value": "x",
+          "label": "供养亲属抚恤金",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "K2",
+      "module": "K",
+      "title": "是否主张精神损害抚慰金？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "主张",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "不主张",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "K3",
+      "module": "K",
+      "title": "是否主张惩罚性赔偿？",
+      "type": "single",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "主张",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "不主张",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "K4",
+      "module": "K",
+      "title": "现有证据材料（可多选，用于生成证据清单）",
+      "type": "multi",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "身份证/户口簿/亲属关系证明",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "门诊病历、住院病案、诊断证明、出院记录",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "医疗费票据、费用清单",
+          "next": null
+        },
+        {
+          "value": "d",
+          "label": "道路交通事故认定书",
+          "next": null
+        },
+        {
+          "value": "e",
+          "label": "伤残鉴定意见书、三期评定",
+          "next": null
+        },
+        {
+          "value": "f",
+          "label": "劳动合同、工资流水、社保缴费记录",
+          "next": null
+        },
+        {
+          "value": "g",
+          "label": "工伤认定决定书、劳动能力鉴定结论",
+          "next": null
+        },
+        {
+          "value": "h",
+          "label": "监控视频、行车记录仪、现场照片",
+          "next": null
+        },
+        {
+          "value": "i",
+          "label": "证人证言",
+          "next": null
+        },
+        {
+          "value": "j",
+          "label": "报警记录、询问笔录、行政处罚决定书",
+          "next": null
+        },
+        {
+          "value": "k",
+          "label": "保险单、理赔记录",
+          "next": null
+        },
+        {
+          "value": "l",
+          "label": "完税证明、经营流水、误工证明",
+          "next": null
+        },
+        {
+          "value": "m",
+          "label": "协商记录、催告函、微信聊天记录",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "K5",
+      "module": "K",
+      "title": "需要向法院申请的事项（可多选）",
+      "type": "multi",
+      "required": false,
+      "showWhen": null,
+      "options": [
+        {
+          "value": "a",
+          "label": "伤残等级及三期鉴定",
+          "next": null
+        },
+        {
+          "value": "b",
+          "label": "因果关系/医疗过错鉴定",
+          "next": null
+        },
+        {
+          "value": "c",
+          "label": "护理依赖程度鉴定",
+          "next": null
+        },
+        {
+          "value": "d",
+          "label": "后续治疗费评估",
+          "next": null
+        },
+        {
+          "value": "e",
+          "label": "调取监控、出警记录、社保记录",
+          "next": null
+        },
+        {
+          "value": "f",
+          "label": "通知证人出庭",
+          "next": null
+        },
+        {
+          "value": "g",
+          "label": "财产保全",
+          "next": null
+        }
+      ],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    },
+    {
+      "id": "K6",
+      "module": "K",
+      "title": "其他需要补充说明的情况（如对方已部分赔付、存在多个受害人、涉及保险拒赔等）",
+      "type": "textarea",
+      "required": false,
+      "showWhen": null,
+      "options": [],
+      "next": null,
+      "hint": "为确保生成内容真实、准确，请填写真实信息。",
+      "templateVariables": [],
+      "calculationKey": null,
+      "sourceVersion": "问卷设计与计算规则 v1.0"
+    }
+  ]
+}
+</script>
+<script type="application/json" id="embedded-params">{
+  "version": "2026-v1.0",
+  "statisticalYear": 2025,
+  "applicableYear": 2026,
+  "nationalUrbanIncome": 56502,
+  "provinces": [
+    {"name":"北京","income":96292,"consume":54122,"wage":null},
+    {"name":"天津","income":60099,"consume":39693,"wage":149507},
+    {"name":"河北","income":47544,"consume":30522,"wage":null},
+    {"name":"山西","income":44649,"consume":27339,"wage":101538},
+    {"name":"内蒙古","income":52829,"consume":34183,"wage":117113},
+    {"name":"辽宁","income":50057,"consume":31428,"wage":null},
+    {"name":"吉林","income":40817,"consume":29745,"wage":null},
+    {"name":"黑龙江","income":39901,"consume":28666,"wage":104712},
+    {"name":"上海","income":96842,"consume":57076,"wage":null},
+    {"name":"江苏","income":68956,"consume":43917,"wage":134969},
+    {"name":"浙江","income":81649,"consume":53223,"wage":141902},
+    {"name":"安徽","income":51737,"consume":30539,"wage":109374},
+    {"name":"福建","income":61437,"consume":41729,"wage":116510},
+    {"name":"江西","income":49580,"consume":30249,"wage":99446},
+    {"name":"山东","income":56444,"consume":32561,"wage":112857},
+    {"name":"河南","income":43926,"consume":27319,"wage":91023,"wageStatus":"建议核对"},
+    {"name":"湖北","income":49164,"consume":33376,"wage":null},
+    {"name":"湖南","income":53369,"consume":33678,"wage":102468},
+    {"name":"广东","income":63974,"consume":42726,"wage":143284},
+    {"name":"广西","income":44793,"consume":27163,"wage":null},
+    {"name":"海南","income":45829,"consume":32651,"wage":120853},
+    {"name":"重庆","income":51854,"consume":32764,"wage":121162},
+    {"name":"四川","income":49428,"consume":32181,"wage":115697},
+    {"name":"贵州","income":46289,"consume":29434,"wage":null},
+    {"name":"云南","income":46699,"consume":30689,"wage":113558},
+    {"name":"西藏","income":58794,"consume":33281,"wage":null},
+    {"name":"陕西","income":49053,"consume":29807,"wage":116605},
+    {"name":"甘肃","income":43910,"consume":29052,"wage":107376},
+    {"name":"青海","income":43879,"consume":27586,"wage":null},
+    {"name":"宁夏","income":46593,"consume":29686,"wage":125972},
+    {"name":"新疆","income":45106,"consume":29702,"wage":null}
+  ]
+}
+</script>
 <script src="case-engine.js"></script>
 <script>
 const KEY='lawsuit-0.7beta-draft';
@@ -71,7 +3308,12 @@ let questions=[
  {id:'E16',title:'已实际收到的赔偿/垫付款项（元，含保险垫付、单位支付、对方给付）',type:'money',placeholder:'请输入金额'},
  {id:'J4',title:'受诉法院全称',type:'text',required:true,placeholder:'例如：深圳市南山区人民法院'}
 ];
-function loadResources(){return Promise.all([fetch('questions.json?v=0.7').then(r=>{if(!r.ok)throw new Error('题库读取失败');return r.json()}),fetch('params_cn.json?v=0.7').then(r=>{if(!r.ok)throw new Error('参数读取失败');return r.json()})]).then(([data,params])=>{paramsData=params;questions=data.questions.map(q=>({...q,type:q.type==='single'?'choice':q.type==='multi'?'multi':q.type==='date_parts'?'dateParts':q.type==='textarea'?'area':q.type,options:(q.options||[]).map(o=>[o.value,o.label,o.next?`→ ${o.next}`:''])}));const i=questions.findIndex(q=>q.id==='D1');questions.splice(i,0,{id:'E0',module:'CLAIMS',title:'本次准备主张哪些赔偿项目？',type:'multi',required:true,hint:'可以多选。系统只会继续询问所选项目需要的数据。',options:[['medical','医疗费',''],['meal','住院伙食补助费',''],['nutrition','营养费',''],['followup','后续治疗费',''],['lost','误工费',''],['care','护理费',''],['transport','交通费',''],['lodging','住宿费',''],['disability','残疾赔偿金',''],['dependants','被扶养人生活费',''],['assistive','残疾辅助器具费',''],['mental','精神损害抚慰金',''],['property','财产损失',''],['appraisal','鉴定费等合理支出','']]});save();render()}).catch(()=>render())}
+function claimQuestion(){return {id:'E0',module:'CLAIMS',title:'本次准备主张哪些赔偿项目？',type:'multi',required:true,hint:'可以多选。系统只会继续询问所选项目需要的数据。',options:[['medical','医疗费',''],['meal','住院伙食补助费',''],['nutrition','营养费',''],['followup','后续治疗费',''],['lost','误工费',''],['care','护理费',''],['transport','交通费',''],['lodging','住宿费',''],['disability','残疾赔偿金',''],['dependants','被扶养人生活费',''],['assistive','残疾辅助器具费',''],['mental','精神损害抚慰金',''],['property','财产损失',''],['appraisal','鉴定费等合理支出','']]}}
+function prepareQuestions(list){const prepared=list.map(q=>({...q,module:q.module||(q.id==='E0'?'CLAIMS':q.id.charAt(0))}));if(!prepared.some(q=>q.id==='E0')){const i=prepared.findIndex(q=>q.id==='D1');prepared.splice(i<0?prepared.length:i,0,claimQuestion())}return prepared}
+questions=prepareQuestions(questions);
+function hydrateResources(data,params){paramsData=params||{provinces:[]};questions=prepareQuestions(data.questions.map(q=>({...q,type:q.type==='single'?'choice':q.type==='multi'?'multi':q.type==='date_parts'?'dateParts':q.type==='textarea'?'area':q.type,options:(q.options||[]).map(o=>[o.value,o.label,o.next?`→ ${o.next}`:''])})));save();render()}
+function embeddedResource(id){const el=document.getElementById(id);if(!el)return null;try{return JSON.parse(el.textContent)}catch{return null}}
+function loadResources(){const embeddedQuestions=embeddedResource('embedded-questions'),embeddedParams=embeddedResource('embedded-params');if(location.protocol==='file:'&&embeddedQuestions){hydrateResources(embeddedQuestions,embeddedParams);return Promise.resolve()}return Promise.all([fetch('questions.json?v=0.7').then(r=>{if(!r.ok)throw new Error('题库读取失败');return r.json()}),fetch('params_cn.json?v=0.7').then(r=>{if(!r.ok)throw new Error('参数读取失败');return r.json()})]).then(([data,params])=>hydrateResources(data,params)).catch(()=>{if(embeddedQuestions)hydrateResources(embeddedQuestions,embeddedParams);else{questions=prepareQuestions(questions);render()}})}
 function save(){localStorage.setItem(KEY,JSON.stringify(state));document.getElementById('saveState').textContent='● 草稿已保存在本机';}
 function getHistory(){try{return JSON.parse(localStorage.getItem(HISTORY_KEY)||'[]')}catch{return []}}
 function caseTypeName(answers){const type=LawsuitEngine.routeCase(answers).caseType;return type==='traffic'?'机动车交通事故责任纠纷':type==='work'||type==='work_third_party'?'工伤保险待遇纠纷':type==='criminal_attached'?'刑事附带民事诉讼':'人身损害责任纠纷'}
@@ -110,8 +3352,8 @@ function questionGroups(){const qs=activeQs().filter(q=>q.id!=='A1');return grou
 function updateField(id,value){state.answers[id]=value;save()}
 function renderQuestion(q){const val=state.answers[q.id]??(q.type==='multi'||q.type==='defendants'?[]:'');let input='';if(q.type==='choice'||q.type==='single'||q.type==='multi')input=`<div class="choice-grid">${q.options.map(o=>`<button type="button" class="choice ${(q.type==='multi'?val.includes(o[0]):val===o[0])?'selected':''}" onclick="${q.type==='multi'?`toggleMulti('${q.id}','${o[0]}')`:`answer('${q.id}','${o[0]}')`}"><b>${o[1]}</b>${o[2]?`<span>${o[2]}</span>`:''}</button>`).join('')}</div>`;else if(q.type==='dateParts'||q.type==='date_parts')input=`<div class="field">${dateParts(val,q.id)}</div>`;else if(q.type==='defendants')input=renderDefendants();else input=`<div class="field">${q.type==='area'||q.type==='textarea'?`<textarea id="input-${q.id}" oninput="updateField('${q.id}',this.value)" placeholder="${q.placeholder||''}">${escapeHtml(val)}</textarea>`:`<input id="input-${q.id}" type="${q.type==='number'||q.type==='money'?'number':'text'}" value="${escapeHtml(val)}" oninput="updateField('${q.id}',this.value)" placeholder="${q.placeholder||''}" />`}</div>`;return `<section class="question-block" data-qid="${q.id}"><span class="tag">${q.type==='multi'?'多项选择':q.type==='choice'||q.type==='single'?'单项选择':q.type==='defendants'?'被告信息':'信息填写'}</span><h2>${q.title}${q.required?' *':''}</h2><p class="sub">${q.hint||'为确保生成内容真实、准确，请填写真实信息。'}</p>${input}</section>`}
 function render(){const app=document.getElementById('app');if(state.screen==='start'){setSteps(0);app.innerHTML=shell('从案情开始，生成一份诉状草稿','先选择案件类型，系统会将同类信息合并填写，并隐藏与本案无关的问题。',`<div class="notice">0.7β 精简问卷版：同类信息合并填写，并先选择需要主张的赔偿项目，只展示相关问题。题库变量与计算规则保持不变。</div><div class="card"><h2>A1* 本次人身伤害是在什么场景下发生的？</h2><p class="sub">请根据实际情况选择，确保生成内容真实、准确。</p><div class="choice-grid">${questions[0].options.map(o=>`<button class="choice" onclick="start('${o[0]}')"><b>${o[1]}</b><span>${o[2]}</span></button>`).join('')}</div></div>${historyHtml()}`);return}if(state.screen==='question'){setSteps(1);const groups=questionGroups();state.index=Math.min(state.index,Math.max(0,groups.length-1));const group=groups[state.index];if(!group){state.screen='preview';save();render();return}app.innerHTML=shell(group.title,`第 ${state.index+1} 步，共 ${groups.length} 步。本页包含 ${group.questions.length} 项与本案相关的信息。`,`<div class="qmeta"><span>步骤 ${state.index+1} / ${groups.length}</span><span>${group.id}</span></div><div class="progress"><i style="width:${Math.round(((state.index+1)/groups.length)*100)}%"></i></div><div class="compact-tip">已自动隐藏无关问题；带 * 的项目必须填写。页面内容会自动保存在本机。</div><div class="card"><div class="group-title"><h2>${group.title}</h2><span class="group-count">${group.questions.length} 项</span></div>${group.questions.map(renderQuestion).join('')}<div id="group-error" class="notice" style="display:none;color:var(--red)"></div><div class="actions"><button class="btn secondary" onclick="back()">${state.index?'上一步':'返回首页'}</button><button class="btn primary" onclick="next()">${state.index===groups.length-1?'生成预览':'保存并继续'}</button></div></div>`);return}if(state.screen==='preview'){setSteps(2);app.innerHTML=shell('诉状预览','已根据你的答题路径生成诉状结构。预览阶段隐藏费用明细，确认后进入付费环节。',`<div class="notice">预览内容可免费查看，但费用项目、计算过程和金额合计暂不展示。</div><div class="doc">${documentText(false)}</div><div class="actions"><button class="btn secondary" onclick="backToQuestions()">返回修改</button><button class="btn gold" onclick="state.screen='pay';save();render()">继续获取完整诉状</button></div>`);return}if(state.screen==='pay'){setSteps(2);app.innerHTML=shell('获取完整诉状','正式产品将在这里调起微信支付。当前版本提供跳过付费按钮，用于测试生成结果。',`<div class="card"><span class="tag">单一套餐</span><h2>完整诉状 Word 文书</h2><p class="sub">费用：9.9 元。支付后查看费用数据并下载 Word。</p><div class="notice">测试专用：点击下方按钮跳过支付，直接查看带金额的完整诉状。</div><div class="actions"><button class="btn secondary" onclick="state.screen='preview';render()">返回预览</button><button class="btn gold" onclick="unlockResult()">跳过付费（测试）</button></div></div>`);return}setSteps(2);app.innerHTML=shell('完整诉状（已解锁）','以下内容包含费用项目、计算公式和保险责任分配。正式提交前请由法律专业人员复核。',`<div class="demo"><b>测试版已跳过付费</b>：正式版本将在这里校验 9.9 元订单后解锁。</div><div class="card"><div class="result-head"><div><span class="tag">已解锁费用数据</span><h2>费用计算结果</h2></div><span class="risk">仅供参考 · 建议复核</span></div><div class="calc">${calcTable()}</div></div><div class="doc" style="margin-top:18px">${documentText(true)}</div><div class="actions"><button class="btn secondary" onclick="restart()">重新填写</button></div><div class="footer-note">本演示版用于验证精简问卷、计算规则和诉状内容；正式版本仅交付 Word 文件。</div>`)}
-function scrollToTop(){requestAnimationFrame(()=>window.scrollTo({top:0,left:0,behavior:'auto'}))}
-function start(v){state.answers={A1:v};state.path=['A1'];state.index=0;state.screen='question';save();render();scrollToTop()}
+function scrollToTop(){const reset=()=>{window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body.scrollTop=0};reset();requestAnimationFrame(()=>{reset();requestAnimationFrame(reset)});setTimeout(reset,80)}
+function start(v){state.answers={A1:v};state.path=['A1'];state.index=0;state.screen='question';delete state.historyId;save();render();scrollToTop()}
 function answer(id,v){state.answers[id]=v;save();render()}
 function toggleMulti(id,v){const values=Array.isArray(state.answers[id])?state.answers[id]:[];state.answers[id]=values.includes(v)?values.filter(x=>x!==v):[...values,v];if(id==='E0')state.answers.K2=state.answers[id].includes('mental')?'a':'b';save();render()}
 function next(){const groups=questionGroups(),group=groups[state.index];let missing='';for(const q of group.questions){const value=state.answers[q.id];if(q.type==='defendants'){const list=defendantList();if(list.length===0||list.some(p=>!p.name.trim()||!p.address.trim()||!p.role.trim()))missing='请至少添加一名被告，并填写其名称、案件身份和地址。'}else if(q.required&&(value===''||value==null||(Array.isArray(value)&&value.length===0)))missing=`请填写“${q.title}”。`;if(missing)break}if(missing){const el=document.getElementById('group-error');el.textContent=missing;el.style.display='block';return}if(state.index>=groups.length-1){state.screen='preview';archiveCurrentCase(false)}else state.index++;save();render();scrollToTop()}

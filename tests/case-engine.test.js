@@ -30,4 +30,4 @@ assert.equal(item(engine.calcCase({...base,A4:'a'},params),'残疾赔偿金'),0)
 assert.equal(item(engine.calcCase({...base,E13:50000,K2:'b'},params),'精神损害抚慰金'),0);
 assert.equal(item(engine.calcCase(base,{}),'残疾赔偿金'),0);
 
-console.log('0.6β calculation tests passed');
+console.log('0.7β calculation tests passed');

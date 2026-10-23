@@ -21,5 +21,7 @@ assert.match(questionnaire, /本次人身伤害是在什么场景下发生的/);
 assert.doesNotMatch(home, />账号资料</);
 assert.doesNotMatch(home, />数据同步</);
 assert.doesNotMatch(home, /class="card summary"/);
+assert.equal((home.match(/class="action-card/g) || []).length, 3);
+assert.match(home, /class="intro-copy">适用于交通事故/);
 
 console.log('0.11β product positioning tests passed');

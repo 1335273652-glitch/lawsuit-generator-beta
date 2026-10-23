@@ -22,6 +22,7 @@ assert.doesNotMatch(home, />账号资料</);
 assert.doesNotMatch(home, />数据同步</);
 assert.doesNotMatch(home, /class="card summary"/);
 assert.equal((home.match(/class="action-card/g) || []).length, 3);
+assert.match(home, /class="action-card primary-action"[^>]*><span class="action-icon">诉/);
 assert.match(home, /class="intro-copy">适用于交通事故/);
 assert.match(home, />隐私政策</);
 assert.match(home, />清除所有数据</);

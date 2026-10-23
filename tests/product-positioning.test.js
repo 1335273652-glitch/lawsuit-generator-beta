@@ -14,5 +14,8 @@ assert.doesNotMatch(home, /startCase\('[abdi]'\)/);
 assert.doesNotMatch(home, /const caseNames=/);
 assert.match(home, /screen:'start',answers:\{\}/);
 assert.match(questionnaire, /本次人身伤害是在什么场景下发生的/);
+assert.doesNotMatch(home, />账号资料</);
+assert.doesNotMatch(home, />数据同步</);
+assert.doesNotMatch(home, /class="card summary"/);
 
 console.log('0.11β product positioning tests passed');

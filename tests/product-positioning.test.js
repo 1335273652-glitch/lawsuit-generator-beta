@@ -5,7 +5,11 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const home = fs.readFileSync(path.join(root, 'miniapp.html'), 'utf8');
 const questionnaire = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const admin = fs.readFileSync(path.join(root, 'admin.html'), 'utf8');
 
+assert.match(home, /<div class="nav-title">速述通<\/div>/);
+assert.doesNotMatch(home, /诉状助手/);
+assert.match(admin, /速述通 · 管理后台/);
 assert.match(home, /人身损害类诉状/);
 assert.match(home, /startCase\(\)/);
 assert.match(home, /productType:'personal_injury_lawsuit'/);

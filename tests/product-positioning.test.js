@@ -26,6 +26,7 @@ assert.match(home, /class="intro-copy">适用于交通事故/);
 assert.match(home, />隐私政策</);
 assert.match(home, />清除所有数据</);
 assert.match(home, />免责声明</);
+assert.ok(home.indexOf('>清除所有数据<') < home.indexOf('>隐私政策<'), '清除所有数据应位于隐私政策上方');
 assert.match(home, /速述通仅收集生成文书所必需的信息/);
 assert.match(home, /不构成法律咨询、案件代理或诉讼结果承诺/);
 assert.match(home, /function clearAllData\(\)/);

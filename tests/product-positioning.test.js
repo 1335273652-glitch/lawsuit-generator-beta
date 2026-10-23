@@ -23,5 +23,11 @@ assert.doesNotMatch(home, />数据同步</);
 assert.doesNotMatch(home, /class="card summary"/);
 assert.equal((home.match(/class="action-card/g) || []).length, 3);
 assert.match(home, /class="intro-copy">适用于交通事故/);
+assert.match(home, />隐私政策</);
+assert.match(home, />清除所有数据</);
+assert.match(home, />免责声明</);
+assert.match(home, /速述通仅收集生成文书所必需的信息/);
+assert.match(home, /不构成法律咨询、案件代理或诉讼结果承诺/);
+assert.match(home, /function clearAllData\(\)/);
 
 console.log('0.11β product positioning tests passed');

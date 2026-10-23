@@ -30,5 +30,7 @@ assert.ok(home.indexOf('>清除所有数据<') < home.indexOf('>隐私政策<'),
 assert.match(home, /速述通仅收集生成文书所必需的信息/);
 assert.match(home, /不构成法律咨询、案件代理或诉讼结果承诺/);
 assert.match(home, /function clearAllData\(\)/);
+assert.match(home, />退出登录</);
+assert.match(home, /function logoutAccount\(\)/);
 
 console.log('0.11β product positioning tests passed');
